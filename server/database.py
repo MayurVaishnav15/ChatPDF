@@ -4,8 +4,6 @@ from datetime import datetime
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-
 # grab database connection url from .env file
 DATABASE_URL = os.environ.get("DATABASE_PUBLIC_URL")
 
