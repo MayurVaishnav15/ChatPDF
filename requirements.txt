@@ -1,0 +1,34 @@
+# LangChain Core
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-chroma
+langchain-huggingface
+langchain-text-splitters
+
+# Vector Database & Embeddings
+chromadb
+sentence-transformers
+rank_bm25
+
+# PDF Processing
+pypdf
+
+# API & Frontend
+fastapi
+uvicorn[standard]
+streamlit
+python-multipart
+
+# Database
+psycopg2-binary
+sqlalchemy
+
+# Security
+bcrypt==4.0.1
+
+# Utilities
+python-dotenv
+pydantic
+requests
