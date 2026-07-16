@@ -47,9 +47,15 @@ if not st.session_state.logged_in:
             # calls FastAPI POST /register
             res = requests.post(f"{API_URL}/register", params={"username": username, "email": email, "password": password})
             if res.status_code == 200:
-                st.success(res.json().get("message", "Registered! Please login."))
+                st.success("Registered! Please login.")
             else:
-                st.error(res.json().get("detail", "Registration failed"))
+                # Force the app to display the raw error instead of crashing
+                try:
+                    error_detail = res.json().get("detail", "Registration failed")
+                    st.error(f"Backend Error: {error_detail}")
+                except Exception:
+                    st.error(f"Backend Returned HTML/Text (Status {res.status_code}):")
+                    st.code(res.text[:1000], language="html")
 
 # ─── MAIN CHAT PAGE ──────────────────────────────────────────────────────────
 else:
