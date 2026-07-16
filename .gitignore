@@ -1,0 +1,7 @@
+.env
+uploaded_pdfs/
+chatpdf.log
+__pycache__/
+*.pyc
+ChatPdfProject/
+.chroma/
