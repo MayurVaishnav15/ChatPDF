@@ -2,14 +2,10 @@ import os
 import uuid
 import shutil
 import bcrypt
-import sys
+
 from fastapi import FastAPI, UploadFile, File, HTTPException, Depends
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-
-
-# tells python to look for modules in the parent folder
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'modules'))
 
 from vectorstore import get_vectorstore
 from llm import get_llm_chain
