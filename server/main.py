@@ -9,7 +9,7 @@ from sqlalchemy.orm import Session
 
 
 # tells python to look for modules in the parent folder
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'modules'))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'modules'))
 
 from vectorstore import get_vectorstore
 from llm import get_llm_chain
